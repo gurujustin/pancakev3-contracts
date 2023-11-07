@@ -10,9 +10,9 @@ import '@nomiclabs/hardhat-etherscan'
 import 'solidity-docgen'
 require('dotenv').config({ path: require('find-config')('.env') })
 
-// const pulseTestnet: NetworkUserConfig = {
+// const pulseMainnet: NetworkUserConfig = {
 //   url: 'https://rpc.ankr.com/bsc_testnet_chapel',
-//   chainId: 943,
+//   chainId: 369,
 //   accounts: [process.env.KEY_TESTNET!],
 // }
 
@@ -28,10 +28,11 @@ require('dotenv').config({ path: require('find-config')('.env') })
 //   // accounts: [process.env.KEY_MAINNET!],
 // }
 
-const pulseTestnet: NetworkUserConfig = {
-  url: 'https://rpc.v4.testnet.pulsechain.com/',
-  chainId: 943,
+const pulseMainnet: NetworkUserConfig = {
+  url: 'https://rpc.pulsechain.com',
+  chainId: 369,
   accounts: [process.env.KEY_TESTNET!],
+  gasPrice: 1000000000000000
 }
 
 const bscMainnet: NetworkUserConfig = {
@@ -44,6 +45,7 @@ const goerli: NetworkUserConfig = {
   url: 'https://rpc.ankr.com/eth_goerli',
   chainId: 5,
   accounts: [process.env.KEY_GOERLI!],
+  gasPrice: 10000000000
 }
 
 const eth: NetworkUserConfig = {
@@ -57,10 +59,10 @@ const config: HardhatUserConfig = {
   networks: {
     hardhat: {
       forking: {
-        url: pulseTestnet.url || '',
+        url: pulseMainnet.url || '',
       },
     },
-    ...(process.env.KEY_TESTNET && { pulseTestnet }),
+    ...(process.env.KEY_TESTNET && { pulseMainnet }),
     ...(process.env.KEY_MAINNET && { bscMainnet }),
     ...(process.env.KEY_GOERLI && { goerli }),
     ...(process.env.KEY_ETH && { eth }),
@@ -71,11 +73,11 @@ const config: HardhatUserConfig = {
     apiKey: process.env.ETHERSCAN_API_KEY || '',
     customChains: [
       {
-        network: "pulseTestnet",
-        chainId: 943,
+        network: "pulseMainnet",
+        chainId: 369,
         urls: {
-          apiURL: "https://scan.v4.testnet.pulsechain.com/api",
-          browserURL: "https://scan.v4.testnet.pulsechain.com/"
+          apiURL: "https://scan.pulsechain.com/api",
+          browserURL: "https://scan.pulsechain.com/"
         }
       }
     ],

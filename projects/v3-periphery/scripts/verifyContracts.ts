@@ -32,7 +32,7 @@ async function main() {
     constructorArguments: [
       pancakeV3PoolDeployer,
       pancakeV3Factory,
-      '0x70499adEBB11Efd915E3b69E700c331778628707', //WBNB
+      '0xA1077a294dDE1B09bB078844df40758a5D0f9a27', //WBNB
     ],
   });
 
@@ -52,7 +52,7 @@ async function main() {
   //     address: nonfungibleTokenPositionDescriptor,
   //     contract: 'contracts/NonfungibleTokenPositionDescriptor.sol:NonfungibleTokenPositionDescriptor',
   //     constructorArguments: [
-  //         '0x70499adEBB11Efd915E3b69E700c331778628707', //WBNB
+  //         '0xA1077a294dDE1B09bB078844df40758a5D0f9a27', //WBNB
   //         '0x4554480000000000000000000000000000000000000000000000000000000000',
   //         nftDescriptorEx
   //     ],
@@ -64,7 +64,7 @@ async function main() {
     constructorArguments: [
       pancakeV3PoolDeployer,
       pancakeV3Factory,
-      "0x70499adEBB11Efd915E3b69E700c331778628707", // WBNB
+      "0xA1077a294dDE1B09bB078844df40758a5D0f9a27", // WBNB
       nonfungibleTokenPositionDescriptor,
     ],
   });

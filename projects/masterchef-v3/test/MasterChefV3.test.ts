@@ -19,7 +19,7 @@ import MasterChefArtifact from "./MasterChef.json";
 import MasterChefV2Artifact from "./MasterChefV2.json";
 import MockBoostArtifact from "./MockBoost.json";
 
-const WETH9Address = "0x70499adEBB11Efd915E3b69E700c331778628707";
+const WETH9Address = "0xA1077a294dDE1B09bB078844df40758a5D0f9a27";
 const nativeCurrencyLabel = "tBNB";
 
 describe("MasterChefV3", function () {

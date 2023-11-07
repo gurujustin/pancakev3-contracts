@@ -6,7 +6,7 @@ const networks = {
   eth: 'eth',
   goerli: 'goerli',
   bscMainnet: 'bscMainnet',
-  pulseTestnet: 'pulseTestnet',
+  pulseMainnet: 'pulseMainnet',
   hardhat: 'hardhat',
 }
 

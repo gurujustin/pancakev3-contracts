@@ -3,7 +3,7 @@ import { Contract, ContractFactory, utils, BigNumber } from "ethers";
 import { ethers, waffle } from "hardhat";
 import { linkLibraries } from "../util/linkLibraries";
 
-const WBNB = "0x70499adEBB11Efd915E3b69E700c331778628707"; // BSC TESTNET
+const WBNB = "0xA1077a294dDE1B09bB078844df40758a5D0f9a27"; // BSC TESTNET
 
 type ContractJson = { abi: any; bytecode: string };
 const artifacts: { [name: string]: ContractJson } = {
