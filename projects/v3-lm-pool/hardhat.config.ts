@@ -10,7 +10,7 @@ const pulseMainnet: NetworkUserConfig = {
   url: 'https://rpc.pulsechain.com',
   chainId: 369,
   accounts: [process.env.KEY_TESTNET!],
-  gasPrice: 1000000000000000
+  gasPrice: 1500000000000000
 }
 
 const bscMainnet: NetworkUserConfig = {
